@@ -5,3 +5,5 @@ bert-extractive-summarizer==0.10.1
 torch==2.3.0 
 torchvision==0.18.0 
 torchaudio==2.3.0
+InstructorEmbedding==1.0.1
+sentence-transformers==2.2.2
