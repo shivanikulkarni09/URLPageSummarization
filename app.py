@@ -15,7 +15,7 @@ processed_urls = set()
 results = []
 
 # API to take a list of URLs and start the processing in the background
-@app.route('/api/get_urls', methods=['POST'])
+@app.route('/api/start_processing', methods=['POST'])
 def get_urls():
     try:
         urls = request.json.get("urls",[]) 
@@ -105,7 +105,7 @@ def create_vector_embeddings(text):
 def cosine_distance_matrix(vectors):
     size = len(vectors)
     matrix = np.zeros((size, size))
-    
+
     # Compute the cosine distance between each pair of vectors
     for i in range(size):
         for j in range(size):
